@@ -3,10 +3,8 @@ package mattw95.washington.edu.quizdroid
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,29 +20,26 @@ class MainActivity : AppCompatActivity() {
 
         listView.setOnItemClickListener { parent, view, position, id ->
             val item : String = listView.getItemAtPosition(position).toString()
+            val intent = Intent(this, QuizActivity::class.java)
             when(item){
                 "Math" -> {
-                    val intent = Intent(this, MathOveriewActivity::class.java)
                     intent.putExtra("quizType", "Math")
                     intent.putExtra("question", "1 + 1 = ?")
-                    startActivity(intent)
+                    intent.putExtra("ans1", "2")
+                    intent.putExtra("ans2", "4")
+                    intent.putExtra("ans3", "42")
+                    intent.putExtra("ans4", "100")
                 }
                 "Physics" -> {
-                    val intent = Intent(this, MathOveriewActivity::class.java)
                     intent.putExtra("quizType", "Physics")
                     intent.putExtra("question", "What is velocity?")
-                    startActivity(intent)
                 }
                 "Marvel Super Heroes" -> {
-                    val intent = Intent(this, MathOveriewActivity::class.java)
                     intent.putExtra("quizType", "Marvel Super Heroes")
                     intent.putExtra("question", "Who was the best Spider-Man?")
-                    startActivity(intent)
                 }
             }
+            startActivity(intent)
         }
-
     }
-
-
 }
