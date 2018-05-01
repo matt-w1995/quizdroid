@@ -4,69 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MathQuestion">
+    tools:context=".QuestionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/txtMathQuestion1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textQuestion"
+        android:layout_width="335dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="1 + 1 = ?"
-        app:layout_constraintBottom_toTopOf="@+id/rdGroupMathQtn1"
+        android:text="Question"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupAnswers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/rdGroupMathQtn1"
-        android:layout_width="247dp"
-        android:layout_height="190dp"
+        android:id="@+id/radioGroupAnswers"
+        android:layout_width="261dp"
+        android:layout_height="206dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnMathQtn1Submit"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMathQuestion1">
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion">
 
         <RadioButton
-            android:id="@+id/btnMathAns1"
+            android:id="@+id/radioButtonAns1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/btnMathAns2"
+            android:id="@+id/radioButtonAns2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="42" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/btnMathAns3"
+            android:id="@+id/radioButtonAns3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="the radius of the sun" />
+            android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/btnMathAns4"
+            android:id="@+id/radioButtonAns4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sweet Dee" />
+            android:text="RadioButton" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnMathQtn1Submit"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdGroupMathQtn1" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupAnswers" />
 </android.support.constraint.ConstraintLayout>
